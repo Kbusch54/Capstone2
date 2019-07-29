@@ -30,8 +30,6 @@ public class TaskApp {
 			scan.nextLine();
 			if (userNum == 1) {
 				// call method for list
-
-//				System.out.println((x)+". Team Member: "+names.get(i)+" Tasks: " + tasks.get(i)+ " Due date: "+ dates.get(i));
 				System.out
 						.println("Team Member" + "\t\t\t\t" + "Tasks" + "\t\t\t\t" + "Due Date" + "\t\t\t\t" + "Done?");
 				System.out.println("");
@@ -97,8 +95,7 @@ public class TaskApp {
 				System.out.println("Which task number has been completed?");
 				int z;
 				z = scan.nextInt();
-				int j = z - 1;
-				completes.set(j, true);
+				completeChange(completes, z);
 
 			} else {
 				// exit loop for 5
@@ -107,6 +104,12 @@ public class TaskApp {
 			}
 		} while (cont);
 		scan.close();
+	}
+	public static Boolean completeChange(ArrayList<Boolean> hi, int x) {
+		int z = x -1;
+		
+		return hi.set(z, true);
+		
 	}
 
 }
